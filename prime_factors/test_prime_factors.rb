@@ -6,10 +6,6 @@ class PrimeFactorsTest < Test::Unit::TestCase
     @primes = PrimeFactors.new
   end
 	
-  def test_generate_takes_an_argument_and_returns_a_list
-    assert_respond_to(@primes.generate(rand(50)), "[]")
-  end
-	 	
   def test_one
     assert_equal([], @primes.generate(1))
   end
