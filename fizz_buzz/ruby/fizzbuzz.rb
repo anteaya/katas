@@ -1,19 +1,16 @@
-class FizzBuzz
-  attr_accessor :fizzbuzz
+class Integer
   
-  def fizzbuzz
-    array = []
-    (1..100).each do |x|
-      if x % 3 == 0 && x % 5 == 0
-        x = "FizzBuzz"
-      elsif x % 3 == 0
-        x = "Fizz"
-      elsif x % 5 == 0
-        x = "Buzz"
-      end
-      array << x
+  def to_fizzbuzz
+    case  
+      when self % 3 == 0 && self % 5 == 0
+        return "FizzBuzz"
+      when self % 3 == 0
+        return "Fizz"
+      when self % 5 == 0
+        return "Buzz"
+      else
+        return self
     end
-    array
   end
   
 end

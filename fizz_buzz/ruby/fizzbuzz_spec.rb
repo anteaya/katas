@@ -1,24 +1,21 @@
 require 'rspec'
 require File.join(File.dirname(__FILE__), 'fizzbuzz')
 
-describe FizzBuzz do
-  before(:each) do
-    @new_instance = FizzBuzz.new
+describe Integer  do
+
+  it "1.to_fizzbuzz" do
+    1.to_fizzbuzz.should == 1
   end
 
-  it "fizzbuzz" do
-    @new_instance.fizzbuzz.should be_an_instance_of(Array)
+  it "3.to_fizzbuzz" do
+    3.to_fizzbuzz.should == "Fizz"
   end
 
-  it "prints 'Fizz' for multiples of three" do
-    @new_instance.fizzbuzz[0, 3].should == [1,2,"Fizz"]
+  it "5.to_fizzbuzz" do
+    5.to_fizzbuzz.should == "Buzz"
   end
 
-  it "prints 'Buzz' for multiples of five" do
-    @new_instance.fizzbuzz[3, 2].should == [4, "Buzz"]
-  end
-
-  it "prints 'FizzBuzz' for multiples of both three and five" do
-    @new_instance.fizzbuzz[13, 2].should == [14, "FizzBuzz"]
+  it "15.to_fizzbuzz" do
+    15.to_fizzbuzz.should == "FizzBuzz"
   end
 end
