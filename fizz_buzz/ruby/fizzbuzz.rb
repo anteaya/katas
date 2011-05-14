@@ -2,7 +2,6 @@ class FizzBuzz
   attr_accessor :fizzbuzz
   
   def fizzbuzz
-    array = []
     (1..100).each do |x|
       if x % 3 == 0 && x % 5 == 0
         x = "FizzBuzz"
@@ -11,9 +10,8 @@ class FizzBuzz
       elsif x % 5 == 0
         x = "Buzz"
       end
-      array << x
+      puts x
     end
-    array
   end
   
 end
