@@ -2,15 +2,16 @@ class FizzBuzz
   attr_accessor :fizzbuzz
   
   def fizzbuzz
-    (1..100).each do |x|
+    (1..100).collect do |x|
       if x % 3 == 0 && x % 5 == 0
-        x = "FizzBuzz"
+        "FizzBuzz"
       elsif x % 3 == 0
-        x = "Fizz"
+        "Fizz"
       elsif x % 5 == 0
-        x = "Buzz"
+        "Buzz"
+      else
+        x
       end
-      puts x
     end
   end
   

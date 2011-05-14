@@ -7,7 +7,6 @@ describe FizzBuzz do
   end
 
   it "fizzbuzz" do
-    @new_instance.fizzbuzz.inspect
     @new_instance.fizzbuzz.should be_an_instance_of(Array)
   end
 
