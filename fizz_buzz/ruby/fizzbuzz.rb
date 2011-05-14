@@ -4,12 +4,13 @@ class FizzBuzz
   def fizzbuzz
     array = []
     (1..100).each do |x|
-      if x % 3 == 0 && x % 5 == 0
-        x = "FizzBuzz"
-      elsif x % 3 == 0
-        x = "Fizz"
-      elsif x % 5 == 0
-        x = "Buzz"
+      case
+        when x % 3 == 0 && x % 5 == 0
+          x = "FizzBuzz"
+        when x % 3 == 0
+          x = "Fizz"
+        when x % 5 == 0
+          x = "Buzz"
       end
       array << x
     end
