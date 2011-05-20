@@ -11,8 +11,9 @@ describe RomanNumerals do
   end
 
   context "#to_roman" do
-    it "should take an integer and return the corresponding roman numeral as a string" do
+    it "should take an integer and return a string" do
       @roman_numerals.to_roman(1).should be_an_instance_of(String)
+    end
       hash = {
                1 => "I",
                2 => "II",
@@ -26,6 +27,7 @@ describe RomanNumerals do
                10 => "X",
                20 => "XX"
       }.each_pair do |key, value|
+      it "should take #{key} and return #{value}" do
         @roman_numerals.to_roman(key).should == value
       end
     end
