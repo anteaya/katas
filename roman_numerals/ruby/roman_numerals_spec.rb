@@ -1,5 +1,5 @@
-require 'rspec'
 require File.join(File.dirname(__FILE__), 'roman_numerals')
+require 'rspec'
 
 describe RomanNumerals do
   before(:each) do
